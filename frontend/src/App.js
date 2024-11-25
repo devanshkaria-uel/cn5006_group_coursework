@@ -1,7 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 function App() {
+  const axiosInstance = axios.create({
+    baseURL: "http://localhost:4040/",
+  });
+  const [matchTeam, setMatchTeam] = useState("No Team");
+  const fetchMatches = async () => {
+    var data = await axiosInstance.get("matches/");
+    console.log(data.data);
+  };
+
+  useEffect(() => {
+    fetchMatches();
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
@@ -17,6 +32,7 @@ function App() {
         >
           Learn React
         </a>
+        {/* <button onClick={fetchMatches}>fetch data</button> */}
       </header>
     </div>
   );

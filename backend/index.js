@@ -9,7 +9,7 @@ const app = express();
 //CORS Middleware
 app.use(
   cors({
-    origin: ["http://localhost:5000"], // Change this to the frontend domain
+    origin: ["http://localhost:3000"], // Change this to the frontend domain
     methods: "GET,POST,PUT,DELETE",
     credentials: true, // If you're using cookies for authentication
   })

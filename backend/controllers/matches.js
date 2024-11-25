@@ -1,6 +1,19 @@
 const express = require("express");
 const router = express.Router();
 const Match = require("../models/MatchSchema");
+
+const fetchMatches = async (req, res) => {
+  try {
+    const matches = await Match.find();
+    res.status(200).json({
+      message: "Matches fetched",
+      data: matches,
+    });
+  } catch (e) {
+    console.log(e);
+  }
+};
+
 // Create match function
 const createMatch = async (req, res) => {
   try {
@@ -36,5 +49,6 @@ const createMatch = async (req, res) => {
 };
 
 router.post("/", createMatch);
+router.get("/", fetchMatches);
 
 module.exports = router;
