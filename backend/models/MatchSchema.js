@@ -3,8 +3,8 @@ const mongoose = require("mongoose");
 const Match = mongoose.Schema({
   team: String,
   games_played: Number,
-  wins: Number,
-  draws: Number,
+  win: Number,
+  draw: Number,
   loss: Number,
   goals_for: Number,
   goals_against: Number,

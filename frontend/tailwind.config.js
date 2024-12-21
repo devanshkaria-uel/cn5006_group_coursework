@@ -1,0 +1,46 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ["./src/**/*.{html,js,ts,tsx,jsx}"],
+  theme: {
+    extend: {
+      colors: {
+        "theme-background": "#FAF7F0",
+        "theme-background1": "#FBFBFB",
+        "theme-accent": "#B17457",
+        "theme-text": "#4A4947",
+      },
+      fontFamily: {
+        montserrat: ["Montserrat"],
+        montserrat_light: ["Montserrat-Light"],
+        montserrat_bold: ["Montserrat-Bold"],
+      },
+      fontSize: {
+        "h1-mobile": ["1.5rem", { lineHeight: "2rem" }],
+        "h2-mobile": ["1.375rem", { lineHeight: "1.75rem" }],
+        "h3-mobile": ["1.25rem", { lineHeight: "1.625rem" }],
+        "h4-mobile": ["1.125rem", { lineHeight: "1.5rem" }],
+        "h5-mobile": ["1rem", { lineHeight: "1.375rem" }],
+        "h6-mobile": ["0.875rem", { lineHeight: "1.25rem" }],
+        "body1-mobile": ["0.8125rem", { lineHeight: "1.25rem" }],
+        "body2-mobile": ["0.75rem", { lineHeight: "1.125rem" }],
+        "h1-tablet": ["2rem", { lineHeight: "2.5rem" }],
+        "h2-tablet": ["1.75rem", { lineHeight: "2.25rem" }],
+        "h3-tablet": ["1.625rem", { lineHeight: "2rem" }],
+        "h4-tablet": ["1.5rem", { lineHeight: "1.875rem" }],
+        "h5-tablet": ["1.375rem", { lineHeight: "1.75rem" }],
+        "h6-tablet": ["1.25rem", { lineHeight: "1.625rem" }],
+        "body1-tablet": ["0.875rem", { lineHeight: "1.375rem" }],
+        "body2-tablet": ["0.8125rem", { lineHeight: "1.25rem" }],
+        "h1-desktop": ["2.5rem", { lineHeight: "3rem" }],
+        "h2-desktop": ["2.25rem", { lineHeight: "2.75rem" }],
+        "h3-desktop": ["2rem", { lineHeight: "2.5rem" }],
+        "h4-desktop": ["1.75rem", { lineHeight: "2.25rem" }],
+        "h5-desktop": ["1.5rem", { lineHeight: "2rem" }],
+        "h6-desktop": ["1.25rem", { lineHeight: "1.75rem" }],
+        "body1-desktop": ["0.9375rem", { lineHeight: "1.375rem" }],
+        "body2-desktop": ["0.875rem", { lineHeight: "1.25rem" }],
+      },
+    },
+  },
+  plugins: [],
+};
